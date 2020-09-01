@@ -63,9 +63,9 @@ def self.create_table
     DB[:conn].execute(sql, name).map { |row| new_from_db(row) }.first
   end
     
-    def update
-      
-    end 
-    
+  def update
+    sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.grade, self.id)
+  end
     
 end
