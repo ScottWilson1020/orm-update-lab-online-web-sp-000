@@ -58,7 +58,12 @@ def self.create_table
     self.new(id, name, grade)
   end 
   
-  def self.find_byName
+  def self.find_by_name
+    sql = <<-SQL 
+    
+    
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
+  end 
     
     
     
