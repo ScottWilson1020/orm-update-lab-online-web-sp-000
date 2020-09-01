@@ -58,13 +58,14 @@ def self.create_table
     self.new(id, name, grade)
   end 
   
-  def self.find_by_name
-    sql = <<-SQL 
+   def self.find_by_name(name)
+    sql = "SELECT * FROM students WHERE name = ?"
+    DB[:conn].execute(sql, name).map { |row| new_from_db(row) }.first
+  end
     
-    
-    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
-  end 
-    
+    def update
+      
+    end 
     
     
 end
