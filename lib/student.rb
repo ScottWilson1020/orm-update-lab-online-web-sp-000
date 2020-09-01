@@ -38,11 +38,10 @@ require_relative "../config/environment.rb"
   end
 
 def self.create(name:, grade:)
-    student = self.new(name, grade)
-    student.save
-    student
+    student_new = self.new(name, grade)
+    student_new.save
+    student_new
   end
-  
   
 
   def self.new_from_db(row)
