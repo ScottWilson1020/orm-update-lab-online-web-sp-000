@@ -29,9 +29,9 @@ def self.create_table
   def self.drop_table
     sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
-    end 
+  end 
 
-  def self.save
+  def save
     if self.id
       self.update
     else
@@ -43,6 +43,7 @@ def self.create_table
       DB[:conn].execute(sql, self.name, self.grade)
       @id = DB[:conn].execute("SELECT last_insert_rowid() FROM students")[0][0]
     end
+  end 
     
     
 end
