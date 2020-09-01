@@ -51,5 +51,11 @@ def self.create_table
     student
   end
   
+def self.new_from_db
+  
+  
+end 
+    
+    
     
 end
