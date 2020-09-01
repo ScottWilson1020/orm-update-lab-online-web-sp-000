@@ -26,6 +26,10 @@ def self.create_table
     DB[:conn].execute(sql)
   end 
   
-  
+  def self.drop_table
+    sql = <<-SQL
+    
+    
+  end 
 
 end
