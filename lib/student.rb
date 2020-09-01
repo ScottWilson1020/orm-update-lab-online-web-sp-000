@@ -37,7 +37,7 @@ require_relative "../config/environment.rb"
     end
   end
 
-def self.create
+def self.create(name:, grade:)
     student_new = self.new
     student_new.save
     student_new
