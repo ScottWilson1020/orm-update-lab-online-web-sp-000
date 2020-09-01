@@ -28,8 +28,9 @@ def self.create_table
   
   def self.drop_table
     sql = <<-SQL
-    
-    
-  end 
+    sql = "DROP TABLE IF EXISTS students"
+    DB[:conn].execute(sql)
+
+    end 
 
 end
